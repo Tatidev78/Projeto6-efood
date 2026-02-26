@@ -9,19 +9,13 @@ export const cores = {
 }
 
 export const GlobalCss = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    list-style: none;
-  }
+ * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; list-style: none; }
 
-body{
+  body{
   background-color: ${cores.fundo};
   color: ${cores.vermelhoSuave};
-  padding-top: 0 auto;
-}
+  padding-top: 0;
+  }
 
 .container{
   max-width: 1024px;

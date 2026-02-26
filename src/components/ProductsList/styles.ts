@@ -9,7 +9,7 @@ padding: 32px 0;
 
 export const List = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   column-gap: 40px;
   margin-top: 40px;
   list-style: none;
