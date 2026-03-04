@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import fundo from '../../assets/images/fundo.png';
-import { TagContainer } from '../Tag/styles';
 
 export const HeroBar = styled.div`
   background-image: url(${fundo});
@@ -9,16 +8,33 @@ export const HeroBar = styled.div`
   padding: 40px 0;
 
     .container {
-    position: relative;
-    padding-top: 340px;
+    height: 280px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    align-items: flex-end;
+    text-align: center;
+  }
+    h1{
+      font-weight: bold;
+      width: 600px;
+    }
+
+    .cta {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 10px 20px;
+    background-color: #e66767;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
   }
 
-  ${TagContainer} {
-    position: absolute;
-    top: 32px;
-  }
+  .cta:hover {
+    background-color: #c44545;
+    transform: scale(1.05);
+  
 
 `;

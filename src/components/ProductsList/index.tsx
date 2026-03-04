@@ -1,29 +1,25 @@
 import Products from "../Products";
-import GlobalCss from "../../styles";
 import {Container, List} from "./styles"
-
-interface Prato {
-  id: number | string;
-  title: string;
-  description: string;
-  image: string;
-  nota: number | string;
-  infos: string[];
-}
+import {Prato} from '../../types'
 
 export type Props ={
-    title: string
+    title?: string
     pratos: Prato[]
+    cardapio?: "home" | "pizza"
 }
 
-const ProductsList = ({title, pratos}: Props) => {
+const ProductsList = ({title, pratos, cardapio}: Props) => {
+    console.log('PRATOS:', pratos)
+
     return (
         <Container>
             <div className="container">
                 <h2>{title}</h2>
-            <List>
+            <List $cardapio="pizza">
                 {pratos.map((prato) => (
-                    <Products key={prato.id} title={prato.title} description={prato.description} image={prato.image} nota={Number (prato.nota)} infos={prato.infos} button="Saiba mais"/>
+                    <li key={prato.id}>
+                        <Products  title={prato.title} description={prato.description} image={prato.image} nota={Number (prato.nota)} infos={prato.infos} cardapio={cardapio}/>
+                    </li>
                 ))}
             </List>
             </div>

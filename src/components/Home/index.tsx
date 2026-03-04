@@ -1,6 +1,8 @@
 import ProductsList from '../ProductsList'
-import comida_japa1 from '../assets/images/comida_japa1.png'
-import comida_italiana1 from '../assets/images/comida_italiana1.png'
+import comida_japa1 from '../../assets/images/comida_japa1.png'
+import comida_italiana1 from '../../assets/images/comida_italiana1.png'
+import Hero from '../Hero'
+
 
 type Prato = {
   id: number
@@ -63,7 +65,10 @@ const pratos: Prato[] = [
 ]
 
 const Home = () => (
-  <ProductsList title="Restaurantes" pratos={pratos} />
+  <>
+    <Hero />
+    <ProductsList pratos={pratos} />
+  </>
 )
 
 export default Home
