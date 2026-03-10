@@ -5,7 +5,7 @@ import Home from '../components/Home';
 const Rotas = () => (
   <Routes>
     <Route path="/" element={<Home />} />
-    <Route path ="/" element={<Pizza/>}/>
+    <Route path ="/pizza" element={<Pizza/>}/>
   </Routes>
 );
 

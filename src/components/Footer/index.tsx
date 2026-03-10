@@ -1,13 +1,13 @@
 import logo from '../../assets/images/logo.png'
 import {FooterContainer} from './styles'
-import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 
 export const Footer = () => (
     <FooterContainer>
         <div className="container">
             <img src={logo} alt="logo efood" />
                 <ul>
-                    <li><FaFacebookF /></li>
+                    <li><FaFacebook /></li>
                     <li><FaInstagram /></li>
                     <li><FaTwitter /></li>
                 </ul>
