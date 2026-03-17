@@ -25,7 +25,7 @@ const Button = ({ type, title, to, onClick, children, $cardapio }: Props) => {
 
   return (
     <ButtonLink
-      to={to as string}
+      to="/pizza"
       title={title}
       $cardapio={$cardapio} // ← passa para o styled-component
     >

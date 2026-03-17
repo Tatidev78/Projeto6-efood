@@ -1,19 +1,28 @@
 import React from 'react'
-import {HeaderBar} from './styles'
+import { Link } from 'react-router-dom'
+import {HeaderBar, Banner} from './styles'
 import logo from '../../assets/images/logo.png'
 
 
 const PerfilHeader = () => (
+  <>
   <HeaderBar>
     <div className='container'>
-      <p>Restaurante</p>
+      <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <h2>Restaurantes</h2>
+        </Link>
+
      <img src={logo} alt="logo efood" />
-     <p> 0 produto(s) no carrinho</p>
-     </div>
-     <div>
-      <img src="./assets/images/apresentacao.png" alt="" />
+     <h2> 0 produto(s) no carrinho</h2>
      </div>
   </HeaderBar>
+  <Banner>
+      <div className="container">
+        <h3>Italiana</h3>
+        <h2>La Dolce Vita Trattoria</h2>
+      </div>
+    </Banner>
+  </>
 )
 
 export default PerfilHeader

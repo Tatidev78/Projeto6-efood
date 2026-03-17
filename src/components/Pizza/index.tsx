@@ -6,7 +6,7 @@ import pizza3 from '../../assets/images/pizza3.png'
 const pratos: Prato[] = [
   {
     id: 7,
-    title: 'Pizza',
+    title: 'Pizza Marguerita',
     description: 'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     image: pizza3,
     nota: 5.0,
@@ -14,7 +14,7 @@ const pratos: Prato[] = [
   },
   {
     id: 8,
-    title: 'Pizza',
+    title: 'Pizza Marguerita',
      description: 'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     image: pizza3,
     nota: 4.9,

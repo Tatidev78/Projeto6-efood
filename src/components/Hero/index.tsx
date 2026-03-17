@@ -9,7 +9,6 @@ const Hero = () => (
     <div className='container'>
      <img src={logo} alt="logo efood" />
      <h1>Viva experiências gastronômicas no conforto da sua casa</h1>
-     <Link to="/pizza" className='cta'>Ver Pizzas</Link>
      </div>
   </HeroBar>
 )

@@ -15,7 +15,7 @@ const ProductsList = ({title, pratos, cardapio}: Props) => {
         <Container>
             <div className="container">
                 <h2>{title}</h2>
-            <List $cardapio="pizza">
+            <List $cardapio={cardapio}>
                 {pratos.map((prato) => (
                     <li key={prato.id}>
                         <Products  title={prato.title} description={prato.description} image={prato.image} nota={Number (prato.nota)} infos={prato.infos} cardapio={cardapio}/>

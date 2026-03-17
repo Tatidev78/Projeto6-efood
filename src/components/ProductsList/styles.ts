@@ -9,20 +9,23 @@ export const Container = styled.section`
 
 export const List = styled.ul<{ $cardapio?: "home" | "pizza" }>`
   display: grid;
-
   grid-template-columns: ${({ $cardapio }) =>
     $cardapio === "pizza"
       ? "repeat(3, 1fr)"
       : "repeat(2, 1fr)"};
 
-  gap: 32px;
-  margin-top: 40px;
+  
+  column-gap: ${({ $cardapio }) => ($cardapio === "pizza" ? "32px" : "80px")};
+  row-gap:48px;
+  margin:80px 0;
   list-style: none;
   padding: 0;
 
   li {
     width: 100%;
   }
+
+  
 `
 
 export const Title = styled.h2`

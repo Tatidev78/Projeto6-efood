@@ -36,25 +36,31 @@ const Products = ({
         ))}
       </div>
 
-      <div className="title-rating">
-        <Titulo $cardapio={cardapio}>{title}</Titulo>
-        <span className="rating">
-          {nota}
-          <span className="star">★</span>
-        </span>
+      <div className="content">
+        <div className="title-rating">
+          <Titulo $cardapio={cardapio}>{title}</Titulo>
+
+          {cardapio !== 'pizza' && (
+            <span className="rating">
+              {nota}
+              <span className="star">★</span>
+            </span>
+          )}
+        </div>
+
+        <Descricao $cardapio={cardapio}>
+          {description}
+        </Descricao>
       </div>
 
-      <Descricao $cardapio={cardapio}>
-        {description}
-      </Descricao>
-
-        <Button
-            type="link"
-            to="/"
-            title={buttonText}
-            $cardapio={cardapio}  >
-            {buttonText}
-  </Button>
+      <Button
+        type="link"
+        to="/"
+        title={buttonText}
+        $cardapio={cardapio}
+      >
+        {buttonText}
+      </Button>
     </Card>
   )
 }

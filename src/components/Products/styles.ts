@@ -1,70 +1,105 @@
 import styled from 'styled-components';
 import { cores } from '../../styles';
 
-export type CardProps ={
+export type CardProps = {
   cardapio?: 'home' | 'pizza'
 }
 
 export const Card = styled.div<{ $cardapio?: "home" | "pizza" }>`
-    position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 360px;
+  position: relative;
 
-    background-color: ${({ $cardapio }) =>
-    $cardapio === "pizza" ? "#E66767" : "#FFFFFF"};
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 
-    border: 1px solid ${cores.vermelhoSuave};
-    overflow:hidden;
-    margin:0 8px;
-    display:flex;
+  padding: ${({ $cardapio }) => ($cardapio === "pizza" ? "8px" : "0")};
+
+  background-color: ${({ $cardapio }) =>
+    $cardapio === "pizza" ? cores.vermelhoSuave : "#FFFFFF"};
+
+  border: 1px solid ${cores.vermelhoSuave};
+
+  img {
+    width: 100%;
+    height: 167px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .content {
+    display: flex;
     flex-direction: column;
     gap: 8px;
+    padding: 0 8px;
+    flex: 1;
+  }
 
-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 0;
-}
-.infos-tags {
+  .infos-tags {
     position: absolute;
-    top:8px; 
+    top: 8px;
     right: 8px;
     display: flex;
-    gap: 8px; 
+    gap: 8px;
   }
 
   .title-rating {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin:0 8px;
   }
 
   .rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
     font-weight: bold;
-    color: ${({ $cardapio }) =>
-    $cardapio === "pizza" ? "#FFFFFF" : cores.vermelhoSuave};
+    color: ${cores.vermelhoSuave};
   }
 
   .star {
-  color: ${({ $cardapio }) =>
-    $cardapio === "pizza" ? "#FFFFFF" : "#FFB930"};
+    color: ${cores.vermelhoSuave};
   }
 
   button {
-    margin:0 8px;
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 4px 0;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+
+    margin-top: auto;
+
+    background-color: ${({ $cardapio }) =>
+      $cardapio === "pizza" ? "#FFEBD9" : cores.vermelhoSuave};
+
+    color: ${({ $cardapio }) =>
+      $cardapio === "pizza" ? cores.vermelhoSuave : "#FFEBD9"};
   }
-`
+`;
 
 export const Titulo = styled.h3<{ $cardapio?: "home" | "pizza" }>`
   color: ${({ $cardapio }) =>
-    $cardapio === "pizza" ? "#FFFFFF" : cores.vermelhoSuave};
-    font-size: 18px;
-    font-weight:bold;
-    margin:0 8px;`
+    $cardapio === "pizza" ? "#FFEBD9" : cores.vermelhoSuave};
+
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: bold;
+  margin: 0;
+`;
 
 export const Descricao = styled.p<{ $cardapio?: "home" | "pizza" }>`
   color: ${({ $cardapio }) =>
-    $cardapio === "pizza" ? "#FFFFFF" : cores.vermelhoSuave};
-    font-size: 14px;
-    line-height: 20px;
-    margin:0 8px;`
+    $cardapio === "pizza" ? "#FFEBD9" : cores.vermelhoSuave};
+
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  margin: 0;
+`;

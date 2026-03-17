@@ -20,7 +20,7 @@ const pratos: Prato[] = [
     description: 'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
     image: comida_japa1,
     nota: 4.5,
-    infos: ['Japonesa', 'Destaque']
+    infos: ['Destaque da semana', 'Japonesa']
   },
   {
     id: 2,
@@ -67,7 +67,7 @@ const pratos: Prato[] = [
 const Home = () => (
   <>
     <Hero />
-    <ProductsList pratos={pratos} />
+    <ProductsList cardapio="home" pratos={pratos} />
   </>
 )
 
