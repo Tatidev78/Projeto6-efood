@@ -10,6 +10,7 @@ type Props = {
   nota: number
   infos?: string[]
   cardapio?: 'home' | 'pizza'
+  onClick?: () => void
 }
 
 const Products = ({
@@ -18,7 +19,8 @@ const Products = ({
   image,
   nota,
   infos,
-  cardapio = 'home'
+  cardapio = 'home',
+  onClick
 }: Props) => {
 
   const buttonText =
@@ -54,12 +56,13 @@ const Products = ({
       </div>
 
       <Button
-        type="link"
-        to="/"
-        title={buttonText}
-        $cardapio={cardapio}
-      >
-        {buttonText}
+          type={cardapio === 'pizza' ? 'button' : 'link'}
+          to="/"
+          onClick={onClick}
+          title={buttonText}
+          $cardapio={cardapio}
+        >
+          {buttonText}
       </Button>
     </Card>
   )

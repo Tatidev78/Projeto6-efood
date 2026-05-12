@@ -103,3 +103,79 @@ export const Descricao = styled.p<{ $cardapio?: "home" | "pizza" }>`
   font-weight: 400;
   margin: 0;
 `;
+
+export const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.73);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+`
+
+export const Modal = styled.div`
+  width: 1024px;
+
+  background: #E66767;
+
+  padding: 32px;
+
+  position: relative;
+
+  display: flex;
+  gap: 24px;
+
+  img {
+    width: 280px;
+    height: 280px;
+
+    object-fit: cover;
+  }
+
+  .modal-content {
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .close {
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 18px;
+  }
+
+  .modal-content button {
+    margin-top: 16px;
+
+    background: #FFEBD9;
+
+    border: none;
+
+    padding: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+  }
+`
+
